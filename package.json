@@ -1,0 +1,54 @@
+{
+  "name": "js-debugging-utilities",
+  "version": "0.1.0",
+  "description": "JavaScript utilities useful for debugging",
+  "main": "src/index.js",
+  "scripts": {
+    "compile": "babel src --out-dir lib",
+    "test": "jest",
+    "build-docs": "jsdoc -r src -d docs"
+  },
+  "devDependencies": {
+      "babel-core": "^7.0.0-0",
+      "@babel/cli": "7.0.0-beta.40",
+      "@babel/core": "7.0.0-beta.40",
+      "@babel/runtime": "7.0.0-beta.40",
+      "@babel/preset-env": "7.0.0-beta.40",
+      "@babel/preset-flow": "7.0.0-beta.40",
+      "@babel/preset-stage-3": "7.0.0-beta.40",
+      "@babel/preset-stage-2": "7.0.0-beta.40",
+      "@babel/plugin-proposal-decorators": "7.0.0-beta.40",
+      "@babel/plugin-proposal-nullish-coalescing-operator": "7.0.0-beta.40",
+      "@babel/plugin-proposal-optional-chaining": "7.0.0-beta.40",
+      "@babel/plugin-syntax-decorators": "7.0.0-beta.40",
+      "@babel/plugin-syntax-flow": "7.0.0-beta.40",
+      "@babel/plugin-syntax-nullish-coalescing-operator": "7.0.0-beta.40",
+      "babel-eslint": "8.2.2",
+      "babel-jest": "22.4.1",
+      "chalk": "2.3.2",
+      "eslint": "4.18.2",
+      "eslint-plugin-flowtype": "2.46.1",
+      "eslint-plugin-import": "2.9.0",
+      "fs-extra": "5.0.0",
+      "jest": "22.1.4"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+        "src/**/*.{js,jsx}"
+    ],
+    "testMatch": [
+        "<rootDir>/test/**/?(*.)(spec|test).{js,jsx}"
+    ],
+    "testEnvironment": "node",
+    "testURL": "http://localhost",
+    "transform": {
+        "^.+\\.(js|jsx)$": "<rootDir>/node_modules/babel-jest"
+    },
+    "transformIgnorePatterns": [
+        "[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"
+    ],
+    "moduleFileExtensions": [
+        "js"
+    ]
+  }
+}
